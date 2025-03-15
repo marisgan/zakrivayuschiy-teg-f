@@ -19,7 +19,8 @@
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' var(--text-weight);
-  padding-top: 100px;
+  padding-block-start: 100px;
+  padding-block-end: 103px;
   background-image: var(--background);
   background-size: cover;
   background-attachment: fixed;
@@ -147,8 +148,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  block-size: 100%;
-  inline-size: 100%;
+  block-size: 101%;
+  inline-size: 101%;
   background-color: var(--accent-color);
   transform: translateX(-100%);
   will-change: transform;
