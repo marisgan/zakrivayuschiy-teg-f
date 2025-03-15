@@ -68,7 +68,7 @@
   position: relative;
   inline-size: clamp(371px, 100%, 696px);
   aspect-ratio: 1/1;
-  
+  border-block: 2px solid var(--border-color);
 }
 
 .card__image {
@@ -77,7 +77,6 @@
   block-size: 100%;
   object-fit: cover;
   object-position: center;
-  border-block: 2px solid var(--border-color);
 }
 
 .card__tag {
