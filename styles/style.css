@@ -65,9 +65,9 @@
 
 .card__image_wrapper {
   position: relative;
-  inline-size: 100%;
+  inline-size: clamp(371px, 100%, 696px);
   aspect-ratio: 1/1;
-  border-block-start: 2px solid var(--border-color);
+  
 }
 
 .card__image {
@@ -76,15 +76,16 @@
   block-size: 100%;
   object-fit: cover;
   object-position: center;
+  border-block: 2px solid var(--border-color);
 }
 
 .card__tag {
   display: block;
   position: absolute;
+  inset-block-start: 25px;
   inset-inline-end: 25px;
-  inset-block-start: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
   font-size: 14px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   mix-blend-mode: hard-light;
   opacity: .5;
@@ -118,7 +119,6 @@
   gap: 27px;
   line-height: 21px;
   padding: 30px 25px 88px 25px ;
-  border-block-start: 2px solid var(--border-color);
 }
 
 .card__button_wrapper {
@@ -235,6 +235,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.dialog__wrapper .button__text {
+  max-width: 234px;
 }
 
 .dialog__floppy {
@@ -370,10 +374,15 @@
   .card__save-button {
     flex-direction: column;
   }
-  .floppy {
+  .button__floppy {
     inline-size: 28px;
+    block-size: 28px;
   }
   .dialog {
     padding-inline: 42px;
+  }
+  .card__tag {
+    inset-inline-end: 13px;
+    inset-block-start: 25px;
   }
 }
